@@ -4,7 +4,7 @@ Run in development mode:
 ```
 npm start
 ```
-Open [http://localhost:4200](http://localhost:4200) to view it in the browser.
+Open [http://localhost:4200](http://localhost:4200) to view it in the browser
 
 Unit tests:
 ```
