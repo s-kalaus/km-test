@@ -2,6 +2,7 @@
 
 Run in development mode:
 ```
+npm ci
 npm start
 ```
 Open [http://localhost:4200](http://localhost:4200) to view it in the browser
