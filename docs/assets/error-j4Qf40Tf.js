@@ -1,0 +1,1 @@
+import{j as n,A as t,$ as o}from"./index-CPOxYNCj.js";import{C as r,a}from"./CardContent-yXd6Mh3d.js";const i=()=>n.jsx(r,{children:n.jsx(a,{sx:s.contentPadding,children:n.jsx(t,{variant:"body1",children:o`Page not found`})})}),s={contentPadding:{pt:3}};export{i as Error};

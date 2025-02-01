@@ -1,0 +1,36 @@
+query movies(
+  $title: String
+  $genre: [ID]
+  $releaseDateStart: String
+  $releaseDateEnd: String
+  $rating: Int
+  $before: String
+  $after: String
+  $first: Int
+  $ids: [ID]
+) {
+  movies(
+    title: $title
+    genre: $genre
+    releaseDateStart: $releaseDateStart
+    releaseDateEnd: $releaseDateEnd
+    rating: $rating
+    before: $before
+    after: $after
+    first: $first
+    ids: $ids
+  ) {
+    list {
+      id
+      title
+      director
+      releaseDate
+      poster
+      rating
+    }
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+    }
+  }
+}

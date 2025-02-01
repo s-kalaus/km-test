@@ -1,0 +1,47 @@
+type Genre {
+  id: ID!
+  title: String!
+}
+
+type Actor {
+  id: ID!
+  name: String!
+}
+
+type Movie {
+  id: ID!
+  title: String!
+  plot: String!
+  director: String!
+  poster: String!
+  releaseDate: String!
+  genres: [Genre!]!
+  actors: [Actor!]!
+  rating: Int!
+}
+
+type PageInfo {
+  hasNextPage: Boolean!
+  hasPreviousPage: Boolean!
+}
+
+type MoviesResult {
+  list: [Movie!]!
+  pageInfo: PageInfo!
+}
+
+type Query {
+  genres: [Genre!]!
+  movies(
+    title: String
+    genre: [ID]
+    releaseDateStart: String
+    releaseDateEnd: String
+    rating: Int
+    before: String
+    after: String
+    first: Int
+    ids: [ID]
+  ): MoviesResult!
+  movie(id: ID!): Movie
+}

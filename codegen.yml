@@ -1,0 +1,25 @@
+overwrite: true
+schema: './src/schema.graphql'
+documents:
+  - src/app/graphql/**/*.graphql
+generates:
+  src/app/graphql/schema.json:
+    plugins:
+      - introspection
+  src/app/graphql/fragments.ts:
+    plugins:
+      - fragment-matcher
+  src/app/graphql/types.ts:
+    plugins:
+      - typescript
+  src/app/graphql:
+    preset: near-operation-file
+    presetConfig:
+      extension: .generated.ts
+      baseTypesPath: types.ts
+    plugins:
+      - typescript-operations
+      - typescript-react-apollo
+    config:
+      skipTypename: true
+      withMutationFn: false
